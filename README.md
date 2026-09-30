@@ -8,4 +8,4 @@ Problems building or running CiCo?
 * Run `./build.sh` to build the project.
 * Run `./clean.sh` to delete generated class files from building.
 * Run `./run.sh` to run the project. 
-<!-- monstad3@student.cvtc.edu -->
+Michael Onstad
