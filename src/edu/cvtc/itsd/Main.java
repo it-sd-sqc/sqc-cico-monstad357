@@ -144,11 +144,11 @@ public class Main {
           return;
         }
 
-//        if (currentState % 2 != 1) {
-//           labelState.setText("Checked IN");
-//        } else {
-//          labelState.setText("Checked OUT");
-//        }
+        if (currentState % 2 != 1) {
+           labelState.setText("Checked IN");
+        } else {
+          labelState.setText("Checked OUT");
+        }
         
         statementUpdateLog.setInt(1, id);
         statementUpdateLog.setInt(2, currentState);
