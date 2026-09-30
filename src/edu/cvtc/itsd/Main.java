@@ -136,12 +136,20 @@ public class Main {
 
         statementUpdateMember.setInt(1, currentState);
         statementUpdateMember.setInt(2, id);
+
+
         int numChanged = statementUpdateMember.executeUpdate();
         if (numChanged != 1) {
           showError(ERROR_UPDATE_FAILED);
           return;
         }
 
+        if (currentState % 2 != 1) {
+           labelState.setText("Checked IN");
+        } else {
+          labelState.setText("Checked OUT");
+        }
+        
         statementUpdateLog.setInt(1, id);
         statementUpdateLog.setInt(2, currentState);
         int numInserted = statementUpdateLog.executeUpdate();
