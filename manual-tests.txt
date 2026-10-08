@@ -76,4 +76,13 @@ Module 3: Status changed or not
 ## Expected results
 * Should display "Developer" for the user name.
 
+# Module 4: Allow only numeric input
+
+## Test steps
+1. Build and run CiCo.
+2. Enter abcdefghi into the field and click update
+
+## Expected results
+* Should display "Please enter numbers only".
+
 
