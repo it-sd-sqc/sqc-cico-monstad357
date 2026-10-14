@@ -77,3 +77,12 @@ Module 3: Status changed or not
 * Should display "Developer" for the user name.
 
 
+# Module 3: Automate user input submission
+
+# Test steps
+1. Build and run CiCo
+2. Enter 00000000
+3. wait 5 seconds
+
+# Expected results
+* Should automatically register the numbers entered and validate them as well.
