@@ -77,3 +77,13 @@ Module 3: Status changed or not
 * Should display "Developer" for the user name.
 
 
+# Module 5: shut program down after closing CiCo window
+
+## Test steps
+1. Build and run CiCo
+2. enter 00000000 and click update
+3. wait for the status panel to close
+4. close the CiCo window
+
+## Expected results
+* Should stop the program once the window is closed and display "Clean shutdown" in the console.
