@@ -76,7 +76,6 @@ Module 3: Status changed or not
 ## Expected results
 * Should display "Developer" for the user name.
 
-
 # Module 5: shut program down after closing CiCo window
 
 ## Test steps
@@ -87,3 +86,13 @@ Module 3: Status changed or not
 
 ## Expected results
 * Should stop the program once the window is closed and display "Clean shutdown" in the console.
+
+## Module 6: Automate user input submission
+
+## Test steps
+1. Build and run CiCo
+2. Enter 00000000
+3. wait 5 seconds
+
+## Expected results
+* Should submit user input automatically after 8 digits are typed
