@@ -53,8 +53,12 @@ public class Main {
     public void replace(FilterBypass fb, int offset, int lengthToDelete, String stringToAdd, AttributeSet attr)
         throws BadLocationException
     {
-      if (fb.getDocument() != null) {
+      if (fb.getDocument().getLength() + stringToAdd.length() <= MAX_LENGTH ) {
         super.replace(fb, offset, lengthToDelete, stringToAdd, attr);
+
+        if (fb.getDocument().getLength() + stringToAdd.length() == MAX_LENGTH + 1) {
+          Main.processCard();
+        }
       }
       else {
         Toolkit.getDefaultToolkit().beep();
@@ -242,6 +246,7 @@ public class Main {
     // Collect each "card" panel in a deck.
     deck = new JPanel(new CardLayout());
     Font fontMain = new Font(Font.SANS_SERIF, Font.PLAIN, 24);
+    frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
     // Main panel /////////////////////////////////////////////////////////////
     JPanel panelMain = new JPanel();
@@ -267,12 +272,6 @@ public class Main {
     fieldNumber.setBackground(Color.green);
     fieldNumber.setForeground(Color.magenta);
     panelMain.add(fieldNumber);
-
-    JButton updateButton = new JButton("Update");
-    updateButton.setAlignmentX(JComponent.CENTER_ALIGNMENT);
-    updateButton.addActionListener(new Update());
-    updateButton.setForeground(Color.green);
-    panelMain.add(updateButton);
 
     panelMain.add(Box.createVerticalGlue());
 
